@@ -4,23 +4,21 @@ xsiTM -- clips/cool TeXmacs plugin
 
 Build
 -----
+$ cd tmc
+$ make
+$ cp tmclips ../xsi/progs
 
-Windows (GCC):
-- requires MSYS/MinGW 32/64
-- run ./build_msys.sh (creates xsiTM.exe)
-
-Linux:
-- run ./build_linux.sh (creates xsiTM)
 
 
 Plugin installation
 -------------------
-Copy the 'xsi' folder to the TeXmacs plugin folder and edit the file
-'progs/init-xsi.scm' to set the path to the executable 'xsiTM' (line 26 ff.)
+Copy the 'xsi' folder to the TeXmacs plugin folder (local/global) and edit the file
+'progs/init-xsi.scm' to set the path to the executable 'tmclips' (line 26 ff.) if
+not in global path.
 
 (plugin-configure xsi
   (:require #t)
-  (:launch "path/xsiTM.exe")
+  (:launch "path/tmclips")
   ;(:test-input-done #t)
   (:serializer ,xsi-serialize)
   (:session "XSI"))
