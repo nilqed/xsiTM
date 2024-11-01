@@ -5,6 +5,7 @@ xsiTM -- clips/cool TeXmacs plugin
 Build
 -----
 $ cd tmc
+$ edit setup.h if not on Linux !
 $ make
 $ cp tmclips ../xsi/progs
 
@@ -24,7 +25,12 @@ not in global path.
   (:session "XSI"))
 
 
-Releases:
-- Windows 32/64 
+Notes:
+-- based on CLIPS 6.30 (withtout *theEnv).
+-- later versions  are not compatible for the moment because 'DefineFunction' is deprecated, 
+   however, it is sufficient for a TeXmacs plugin anyway. 
+-- One has to adjust setup.h for '(system ...) to work, that is specify the OS instead of 'GENERiC'.
 
+  
    
+

@@ -23,7 +23,7 @@
 
 (plugin-configure xsi
   (:require #t)
-  (:launch "xsiTM.exe")
+  (:launch "tmclips")
   ;(:test-input-done #t)
   (:serializer ,xsi-serialize)
   (:session "XSI"))
